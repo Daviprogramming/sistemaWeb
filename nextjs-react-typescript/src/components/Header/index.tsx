@@ -20,6 +20,14 @@ export function Header() {
 
       <nav className="hidden md:flex items-center gap-8">
         <Link
+          href="/reservar"
+          className={`text-sm font-medium transition-colors hover:text-white ${
+            isCurrentRoute("/reservar") ? "text-white" : "text-indigo-200"
+          }`}
+        >
+          Realizar Reserva
+        </Link>
+        <Link
           href="/cancelar"
           className={`text-sm font-medium transition-colors hover:text-white ${
             isCurrentRoute("/cancelar") ? "text-white" : "text-indigo-200"
@@ -35,13 +43,14 @@ export function Header() {
         >
           Salas disponíveis
         </Link>
+
         <Link
           href="/reservar"
           className={`text-sm font-medium transition-colors hover:text-white ${
-            isCurrentRoute("/reservar") ? "text-white" : "text-indigo-200"
+            isCurrentRoute("/consultar") ? "text-white" : "text-indigo-200"
           }`}
         >
-          Realizar Reserva
+          Consultar Reserva
         </Link>
         <Link
           href="/historico"
